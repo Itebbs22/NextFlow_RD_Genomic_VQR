@@ -6,6 +6,8 @@ process BOWTIE_INDEX {
         label 'process_medium'
     }
 
+    container 'staphb/bowtie2'
+
     // Publish indexed files to the specified directory
     publishDir("$params.outdir/BOWTIE_GENOME_IDX", mode: "copy")
 
